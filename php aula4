@@ -1,0 +1,37 @@
+<?php
+require_once 'guarda.php';
+
+$Leo = new guarda();
+$Leo->setnome("Dias");
+echo $Leo->getnome();
+//echo $Leo->nome="Dias"; não podera acessar esse nome pois é está como private
+echo"<br>";
+echo $Leo->cargo;
+echo"<br>";
+echo $Leo-> setor;
+?>
+
+
+
+<?php
+class guarda{
+	private $nome;
+	public $cargo;
+	public $setor;
+	//contrutor da classe
+	function usuario(){
+		$this->preparaNome();
+	}
+
+	function status(){
+		$this->nome = "Dias";
+		$this->cargo = "GM1";
+		$this->setor = "GRL";
+	}
+	function getnome(){
+	return $this->nome;
+	}
+	function setnome($nome ="Leonardo"){
+	 return $this->nome = $nome;
+	 }
+} ?>	
