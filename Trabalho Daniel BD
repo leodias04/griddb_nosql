@@ -1,0 +1,8 @@
+Lista de Banco de dados
+1-	Select * from customers where Country =’Brazil’
+2-	SELECT COUNT (CustomerID) FROM [Customers]
+where Country ='Brazil'
+      3-SELECT * FROM [Customers]  where Country ='Brazil' OR Country='Argentina'
+4-	SELECT CustomerName, Address +','+City+''+PostalCode+','+Country as Endereco FROM [Customers]
+5-SELECT Products.ProductName,Quantity,Price,(Quantity*Price) as total FROM OrderDetails INNER JOIN Products ON OrderDetails.ProductID=Products.ProductID order by ProductName;
+6-SELECT ProductName,sum(OrderDetails.Quantity) FROM [Products] inner join OrderDetails on Products.ProductID = OrderDetails.ProductID group by ProductName;
